@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: asenewe <asenewe@student.42.fr>            +#+  +:+       +#+         #
+#    By: asenewe <asenewe@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 18:15:29 by asenewe           #+#    #+#              #
-#    Updated: 2023/11/13 18:25:02 by asenewe          ###   ########.fr        #
+#    Updated: 2023/11/17 11:52:42 by asenewe          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,4 +46,4 @@ re:				fclean $(NAME)
 bonus:			$(OBJS) $(BONUS_OBJS)
 				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
-.PHONY:			all clean fclean re bon
+.PHONY:			all clean fclean re bonus
