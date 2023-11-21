@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asenewe <asenewe@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 12:10:41 by asenewe           #+#    #+#             */
-/*   Updated: 2023/11/21 15:23:38 by asenewe          ###   ########.fr       */
+/*   Created: 2023/11/21 10:48:50 by asenewe           #+#    #+#             */
+/*   Updated: 2023/11/21 15:23:27 by asenewe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include <stddef.h>
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	while (*s != (unsigned char)c)
-		if (!*s++)
-			return (0);
-	return ((char *)s);
+	if (!dst || !src)
+		return (0);
+	while (n--)
+		*(char *)dst++ = *(char *)src++;
+	return (dst);
 }

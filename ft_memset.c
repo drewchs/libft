@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asenewe <asenewe@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 12:10:41 by asenewe           #+#    #+#             */
-/*   Updated: 2023/11/21 15:23:38 by asenewe          ###   ########.fr       */
+/*   Created: 2023/11/21 10:07:24 by asenewe           #+#    #+#             */
+/*   Updated: 2023/11/21 16:11:48 by asenewe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include <stddef.h>
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-	while (*s != (unsigned char)c)
-		if (!*s++)
-			return (0);
-	return ((char *)s);
+	void	*buf;
+
+	buf = b;
+	while (len--)
+		*(unsigned char *)b++ = (unsigned char)c;
+	return (buf);
 }

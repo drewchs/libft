@@ -6,13 +6,13 @@
 /*   By: asenewe <asenewe@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 12:05:16 by asenewe           #+#    #+#             */
-/*   Updated: 2023/11/17 12:05:27 by asenewe          ###   ########.fr       */
+/*   Updated: 2023/11/21 16:10:16 by asenewe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'A')
+	if (c >= 'A' && c <= 'Z')
 		return (c += 32);
 	else
 		return (c);
